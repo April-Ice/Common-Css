@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js">
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <link href="ofenimg.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片变灰
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox greyscale">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .greyscale img { filter: grayscale(1); -webkit-filter: grayscale(1); -moz-filter: grayscale(1); -o-filter: grayscale(1);
+                        -ms-filter: grayscale(1); } .greyscale img:hover { filter: grayscale(0); -webkit-filter: grayscale(0);
+                        -moz-filter: grayscale(0); -o-filter: grayscale(0); -ms-filter: grayscale(0); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片模糊
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox blur">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .blur img { filter: url(/static/svg/filter.svg#blur); filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px);
+                        -o-filter: blur(2px); -ms-filter: blur(2px); } .blur img:hover { filter: blur(0); -webkit-filter:
+                        blur(0); -moz-filter: blur(0); -o-filter: blur(0); -ms-filter: blur(0); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片饱和度
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox saturate">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .saturate img { filter: saturate(300%); -webkit-filter: saturate(300%); -moz-filter: saturate(300%); -o-filter: saturate(300%);
+                        -ms-filter: saturate(300%); } .saturate img:hover { filter: saturate(100%); -webkit-filter: saturate(100%);
+                        -moz-filter: saturate(100%); -o-filter: saturate(100%); -ms-filter: saturate(100%); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片老照片
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox sepia">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .sepia img { filter: sepia(1); -webkit-filter: sepia(1); -moz-filter: sepia(1); -o-filter: sepia(1); -ms-filter: sepia(1);
+                        } .sepia img:hover { filter: sepia(0); -webkit-filter: sepia(0); -moz-filter: sepia(0); -o-filter:
+                        sepia(0); -ms-filter: sepia(0); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片色相旋转
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox hue-rotate">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .hue-rotate img { /*属性值为 360 度里的值*/ filter: hue-rotate(30deg); -webkit-filter: hue-rotate(30deg); -moz-filter: hue-rotate(30deg);
+                        -o-filter: hue-rotate(30deg); -ms-filter: hue-rotate(30deg); } .hue-rotate img:hover { filter: hue-rotate(0);
+                        -webkit-filter: hue-rotate(0); -moz-filter: hue-rotate(0); -o-filter: hue-rotate(0); -ms-filter:
+                        hue-rotate(0); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片反相
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox invert">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .invert img { filter: invert(1); -webkit-filter: invert(1); -moz-filter: invert(1); -o-filter: invert(1); -ms-filter: invert(1);
+                        } .invert img:hover { filter: invert(0); -webkit-filter: invert(0); -moz-filter: invert(0); -o-filter:
+                        invert(0); -ms-filter: invert(0); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片亮度
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox brightness">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .brightness img { filter: brightness(50%); -webkit-filter: brightness(50%); -moz-filter: brightness(50%); -o-filter: brightness(50%);
+                        -ms-filter: brightness(50%); } .brightness img:hover { filter: brightness(100%); -webkit-filter:
+                        brightness(100%); -moz-filter: brightness(100%); -o-filter: brightness(100%); -ms-filter: brightness(100%);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片色彩平衡
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox contrast">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .contrast img { filter: contrast(0.7); -webkit-filter: contrast(0.7); -moz-filter: contrast(0.7); -o-filter: contrast(0.7);
+                        -ms-filter: contrast(0.7); } .contrast img:hover { filter: contrast(1); -webkit-filter: contrast(1);
+                        -moz-filter: contrast(1); -o-filter: contrast(1); -ms-filter: contrast(1); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <h4 class="title">
+                图片效果 图片倒影
+            </h4>
+            <div class="col-md-6">
+                <div class="imgbox imgShadow">
+                    <img src="imgs/img-1.jpg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <pre>
+                    <code class="css">
+                        .imgShadow { -webkit-box-reflect: below -8px -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(255,
+                        255, 255, 0.5))); }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
