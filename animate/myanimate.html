@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>animate.css动画演示</title>
+
+    <link rel="stylesheet" href="animate.min.css">
+    <script src="jquery-1.8.3.min.js"></script>
+
+    <style>
+        .dowebok-explain {
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: center;
+            color: #f50;
+        }
+
+        h2 {
+            display: inline-block;
+            border-radius: 0.2rem;
+            background: #000;
+            padding: 1em 1.2em;
+            /* width: 10em; */
+            font-size: 1.4rem;
+            text-align: center;
+            color: #f50;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2 class="animated">bounce</h2>
+        <h2 class="animated">flash</h2>
+        <h2 class="animated">pulse</h2>
+        <h2 class="animated">rubberBand</h2>
+        <h2 class="animated">shake</h2>
+        <h2 class="animated">headShake</h2>
+        <h2 class="animated">swing</h2>
+        <h2 class="animated">tada</h2>
+        <h2 class="animated">wobble</h2>
+        <h2 class="animated">jello</h2>
+        <h2 class="animated">bounceIn</h2>
+        <h2 class="animated">bounceInDown</h2>
+        <h2 class="animated">bounceInLeft</h2>
+        <h2 class="animated">bounceInRight</h2>
+        <h2 class="animated">bounceInUp</h2>
+        <h2 class="animated">bounceOut</h2>
+        <h2 class="animated">bounceOutDown</h2>
+        <h2 class="animated">bounceOutLeft</h2>
+        <h2 class="animated">bounceOutRight</h2>
+        <h2 class="animated">bounceOutUp</h2>
+        <h2 class="animated">fadeIn</h2>
+        <h2 class="animated">fadeInDown</h2>
+        <h2 class="animated">fadeInDownBig</h2>
+        <h2 class="animated">fadeInLeft</h2>
+        <h2 class="animated">fadeInLeftBig</h2>
+        <h2 class="animated">fadeInRight</h2>
+        <h2 class="animated">fadeInRightBig</h2>
+        <h2 class="animated">fadeInUp</h2>
+        <h2 class="animated">fadeInUpBig</h2>
+        <h2 class="animated">fadeOut</h2>
+        <h2 class="animated">fadeOutDown</h2>
+        <h2 class="animated">fadeOutDownBig</h2>
+        <h2 class="animated">fadeOutLeft</h2>
+        <h2 class="animated">fadeOutLeftBig</h2>
+        <h2 class="animated">fadeOutRight</h2>
+        <h2 class="animated">fadeOutRightBig</h2>
+        <h2 class="animated">fadeOutUp</h2>
+        <h2 class="animated">fadeOutUpBig</h2>
+        <h2 class="animated">flipInX</h2>
+        <h2 class="animated">flipInY</h2>
+        <h2 class="animated">flipOutX</h2>
+        <h2 class="animated">flipOutY</h2>
+        <h2 class="animated">lightSpeedIn</h2>
+        <h2 class="animated">lightSpeedOut</h2>
+        <h2 class="animated">rotateIn</h2>
+        <h2 class="animated">rotateInDownLeft</h2>
+        <h2 class="animated">rotateInDownRight</h2>
+        <h2 class="animated">rotateInUpLeft</h2>
+        <h2 class="animated">rotateInUpRight</h2>
+        <h2 class="animated">rotateOut</h2>
+        <h2 class="animated">rotateOutDownLeft</h2>
+        <h2 class="animated">rotateOutDownRight</h2>
+        <h2 class="animated">rotateOutUpLeft</h2>
+        <h2 class="animated">rotateOutUpRight</h2>
+        <h2 class="animated">hinge</h2>
+        <h2 class="animated">jackInTheBox</h2>
+        <h2 class="animated">rollIn</h2>
+        <h2 class="animated">rollOut</h2>
+        <h2 class="animated">zoomIn</h2>
+        <h2 class="animated">zoomInDown</h2>
+        <h2 class="animated">zoomInLeft</h2>
+        <h2 class="animated">zoomInRight</h2>
+        <h2 class="animated">zoomInUp</h2>
+        <h2 class="animated">zoomOut</h2>
+        <h2 class="animated">zoomOutDown</h2>
+        <h2 class="animated">zoomOutLeft</h2>
+        <h2 class="animated">zoomOutRight</h2>
+        <h2 class="animated">zoomOutUp</h2>
+        <h2 class="animated">slideInDown</h2>
+        <h2 class="animated">slideInLeft</h2>
+        <h2 class="animated">slideInRight</h2>
+        <h2 class="animated">slideInUp</h2>
+        <h2 class="animated">slideOutDown</h2>
+        <h2 class="animated">slideOutLeft</h2>
+        <h2 class="animated">slideOutRight</h2>
+        <h2 class="animated">slideOutUp</h2>
+    </div>
+
+    <p class="dowebok-explain">您的浏览器不支持 CSS3 animate 属性，所以您看不到任何效果，请使用 Firefox、Chrome 或 IE10</p>
+    <script>
+        $(function () {
+            if ($.browser.msie && $.browser.version < 10) {
+                $('.dowebok-explain').show();
+            }
+
+            //扩展$对象，添加方法animateCss
+            $.fn.extend({
+                animateCss: function (animationName) {
+                    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                    $(this).addClass('animated ' + animationName).one(animationEnd, function () {
+                        $(this).removeClass('animated ' + animationName);
+                    });
+                }
+            });
+
+            // $('#animate1').animateCss('bounce');
+
+            var $h2 = $('.wrap').find('h2');
+            $h2.each(function () {
+                $(this).animateCss($(this).text());
+            });
+            $h2.click(function () {
+                $(this).animateCss($(this).text());
+            });
+        });
+    </script>
+
+</body>
+
+</html>
